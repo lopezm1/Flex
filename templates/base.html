@@ -117,8 +117,16 @@
       </nav>
       {% endif %}
 
+      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/miguel.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
       <ul class="social">
-        {% for name, link in SOCIAL %}
+        {% for name, link in MIGUEL_SOCIAL %}
+        <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+        {% endfor %}
+      </ul>
+
+      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/sergio.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+      <ul class="social">
+        {% for name, link in SERGIO_SOCIAL %}
         <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
       </ul>
