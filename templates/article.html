@@ -23,7 +23,7 @@
            when=article.locale_date,
            category='<a href="%s/%s">%s</a>'|format(SITEURL, article.category.url, article.category)|safe) }}
 
-      {{ _('written by %(author)s',
+      {{ _('by %(author)s',
       author='<a href="%s/%s">%s</a>'|format(SITEURL, article.author.url, article.author)|safe) }}
 
       {% if 'post_stats' in PLUGINS %}
