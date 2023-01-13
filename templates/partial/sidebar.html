@@ -4,7 +4,7 @@
       {% if SITELOGO %}
       <img src="{{ SITELOGO }}" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
       {% else %}
-      <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
+      <!--{<img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">-->
       {% endif %}
     </a>
 
@@ -15,6 +15,32 @@
     {% if SITESUBTITLE %}
     <p>{{ SITESUBTITLE }}</p>
     {% endif %}
+
+    <div class="authors-profiles">
+      <div>
+        <figure>
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/miguel.png" alt="Miguel" title="Miguel">
+          <figcaption>Miguel</figcaption>
+        </figure>
+        <ul class="social">
+          {% for name, link in MIGUEL_SOCIAL %}
+          <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div>
+        <figure>
+          <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/sergio.png" alt="Sergio" title="Sergio">
+          <figcaption>Sergio</figcaption>
+        </figure>
+        <ul class="social">
+          {% for name, link in SERGIO_SOCIAL %}
+          <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
 
     {% if PLUGINS %}
     {% if ('tipue_search' in PLUGINS or 'pelican.plugins.tipue_search' in PLUGINS) %}
