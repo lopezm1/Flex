@@ -24,7 +24,14 @@
         </figure>
         <ul class="social">
           {% for name, link in MIGUEL_SOCIAL %}
-          <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+          <li>
+            <a class="sc-{{ name }}"
+               {% if name in relme %}rel="me"{% endif %}
+               href="{{ link }}"
+               target="_blank">
+              <i class="{% if name in solid %}fa-solid{% else %}fa-brands{% endif %} fa-{{ name }}"></i>
+            </a>
+          </li>
           {% endfor %}
         </ul>
       </div>
@@ -35,7 +42,14 @@
         </figure>
         <ul class="social">
           {% for name, link in SERGIO_SOCIAL %}
-          <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
+          <li>
+            <a class="sc-{{ name }}"
+               {% if name in relme %}rel="me"{% endif %}
+               href="{{ link }}"
+               target="_blank">
+              <i class="{% if name in solid %}fa-solid{% else %}fa-brands{% endif %} fa-{{ name }}"></i>
+            </a>
+          </li>
           {% endfor %}
         </ul>
       </div>
